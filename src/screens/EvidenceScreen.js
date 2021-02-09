@@ -1,9 +1,15 @@
 import React from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Button } from 'react-native';
 
-const EvidenceScreen = () => {
+const EvidenceScreen = ({ navigation }) => {
   return (
-    <Text>Evidence Screen</Text>
+    <>
+      <Text>Evidence Screen</Text>
+      <Button 
+        title="Go to Ghost Screen"
+        onPress={() => navigation.navigate('Ghost')}
+      />
+    </>
   );
 };
 

@@ -1,27 +1,27 @@
-import React from 'react';
-import { View, StyleSheet, Text, Button, FlatList } from 'react-native';
-import { CheckBox } from 'react-native-elements';
+import React, { useState } from 'react';
+import { View, StyleSheet, Text, Button } from 'react-native';
+import { FlatList } from 'react-native-gesture-handler';
+import EvidenceCheckBox from '../components/EvidenceCheckBox';
+
+const evidenceList = [
+  { name: 'Ghost Writing', isChecked: false},
+  { name: 'EMF Level 5', isChecked: false},
+  { name: 'Ghost Orbs', isChecked: false},
+  { name: 'Fingerprints', isChecked: false},
+  { name: 'Freezing Temps', isChecked: false},
+  { name: 'Spirit Box', isChecked: false}
+];
 
 const EvidenceScreen = ({ navigation }) => {
-  const evidence = [
-    {title: 'Ghost Writing'},
-    {title: 'EMF Level 5'},
-    {title: 'Freezing Temperatures'},
-    {title: 'Ghost Orbs'},
-    {title: 'Spirit Box'},
-    {title: 'Fingerprints'}
-  ];
 
   return (
     <>
       <Text>Evidence Screen</Text>
       <FlatList
-        keyExtractor={(evidence) => evidence.title }
-        data={evidence}
+        keyExtractor={evidence => evidence.name}
+        data={evidenceList}
         renderItem={({ item }) => {
-          return <CheckBox 
-            title={item.title}
-          />;
+          return <Text>{item.name}</Text>;
         }}
       />
       <Button 

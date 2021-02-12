@@ -8,7 +8,7 @@ const evidenceList = [
   {id: 2, name: 'EMF Level 5', isChecked: false},
   {id: 3, name: 'Ghost Orbs', isChecked: false},
   {id: 4, name: 'Fingerprints', isChecked: false},
-  {id: 5, name: 'Freezing Temps', isChecked: false},
+  {id: 5, name: 'Freezing Temperatures', isChecked: false},
   {id: 6, name: 'Spirit Box', isChecked: false}
 ];
 
@@ -33,7 +33,7 @@ const EvidenceScreen = ({ navigation }) => {
       {evidence.map(evidence => {
         return <EvidenceCheckBox  key={evidence.id} evidence={evidence} dispatch={dispatch} />;
       })}
-      <GhostList />
+      <GhostList evidence={evidence}/>
       <Button 
         title="Go to Ghost Screen"
         onPress={() => navigation.navigate('Ghost')}

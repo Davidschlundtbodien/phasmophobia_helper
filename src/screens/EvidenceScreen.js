@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
 import EvidenceCheckBox from '../components/EvidenceCheckBox';
+import GhostList from '../components/GhostList';
 
 const evidenceList = [
   {id: 1, name: 'Ghost Writing', isChecked: false},
@@ -32,6 +33,7 @@ const EvidenceScreen = ({ navigation }) => {
       {evidence.map(evidence => {
         return <EvidenceCheckBox  key={evidence.id} evidence={evidence} dispatch={dispatch} />;
       })}
+      <GhostList />
       <Button 
         title="Go to Ghost Screen"
         onPress={() => navigation.navigate('Ghost')}

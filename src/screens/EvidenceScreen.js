@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
 import EvidenceCheckBox from '../components/EvidenceCheckBox';
 import GhostList from '../components/GhostList';
-import EvidenceInfo from '../components/EvidenceInfo'; 
+import { evidenceInfo } from '../components/EvidenceInfo'; 
 
 const reducer = (evidence, action) => {
   switch (action.type) {
@@ -17,7 +17,7 @@ const reducer = (evidence, action) => {
 };
 
 const EvidenceScreen = ({ navigation }) => {
-  const [evidence, dispatch] = useReducer(reducer, EvidenceInfo);
+  const [evidence, dispatch] = useReducer(reducer, evidenceInfo);
 
   return (
     <>

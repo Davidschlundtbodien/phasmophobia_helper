@@ -1,20 +1,27 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import {ghostInfo as ghosts} from '../components/GhostInfo';
+import { ghostInfo } from '../components/GhostInfo';
+import { evidenceInfo } from './EvidenceInfo';
 
 
-const GhostFilter = (evidence) => {
-  
+const GhostFilter = (evidence, ghost) => {
+  var value = 0;
+  evidence.forEach(ev => {
+    value = value + ghost.includes(ev);
+  });
+  return (value === evidence.length);
 };
 
 
 const GhostList = ({ evidence }) => {
   const ev = evidence.filter(ev => ev.isChecked).map(ev => ev.name);
-
+  const ghosts = ghostInfo;
   return (
     <>
       {ghosts.map(ghost => {
-        return <Text key={ghost.name}>{ghost.name}</Text>;
+        if (GhostFilter(ev, ghost.evidence)) {
+          return <Text key={ghost.name}>{ghost.name}</Text>;
+        }
       })}
     </>
   );

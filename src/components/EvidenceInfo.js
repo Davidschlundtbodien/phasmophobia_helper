@@ -1,4 +1,4 @@
-export const EvidenceInfo = [
+export const evidenceInfo = [
   { id: 1, name: 'Ghost Writing', isChecked: false },
   { id: 2, name: 'EMF Level 5', isChecked: false },
   { id: 3, name: 'Ghost Orbs', isChecked: false },

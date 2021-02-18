@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { ghostInfo } from '../components/GhostInfo';
-import { evidenceInfo } from './EvidenceInfo';
 
 
 const GhostFilter = (evidence, ghost) => {
@@ -13,14 +12,16 @@ const GhostFilter = (evidence, ghost) => {
 };
 
 
-const GhostList = ({ evidence }) => {
+const GhostList = ({ evidence, navigation }) => {
   const ev = evidence.filter(ev => ev.isChecked).map(ev => ev.name);
   const ghosts = ghostInfo;
   return (
     <>
       {ghosts.map(ghost => {
         if (GhostFilter(ev, ghost.evidence)) {
-          return <Text key={ghost.name}>{ghost.name}</Text>;
+          return <TouchableOpacity key={ghost.name} onPress={() => navigation.navigate('Ghost', {ghost: ghost})}>
+            <Text>{ghost.name}</Text>
+          </TouchableOpacity>;
         }
       })}
     </>

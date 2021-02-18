@@ -23,13 +23,9 @@ const EvidenceScreen = ({ navigation }) => {
     <>
       <Text>Evidence Screen</Text>
       {evidence.map(evidence => {
-        return <EvidenceCheckBox  key={evidence.id} evidence={evidence} dispatch={dispatch} />;
+        return <EvidenceCheckBox  key={evidence.id} evidence={evidence} dispatch={dispatch}/>;
       })}
-      <GhostList evidence={evidence}/>
-      <Button 
-        title="Go to Ghost Screen"
-        onPress={() => navigation.navigate('Ghost')}
-      />
+      <GhostList evidence={evidence} navigation={navigation}/>
     </>
   );
 };

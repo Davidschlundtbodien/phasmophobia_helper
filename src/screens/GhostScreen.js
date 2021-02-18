@@ -1,9 +1,10 @@
 import React from 'react';
 import { View, StyleSheet, Text } from 'react-native';
 
-const GhostScreen = ({ ghost }) => {
+const GhostScreen = ({ navigation }) => {
+  const ghost = navigation.getParam('ghost');
   return (
-    <Text>Ghost Screen</Text>
+    <Text>{ghost.name}</Text>
   );
 };
 

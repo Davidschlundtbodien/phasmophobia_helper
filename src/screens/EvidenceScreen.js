@@ -1,8 +1,9 @@
 import React, { useReducer } from 'react';
-import { View, StyleSheet, Text, Button } from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 import EvidenceCheckBox from '../components/EvidenceCheckBox';
 import GhostList from '../components/GhostList';
 import { evidenceInfo } from '../components/EvidenceInfo'; 
+
 
 const reducer = (evidence, action) => {
   switch (action.type) {
@@ -20,17 +21,30 @@ const EvidenceScreen = ({ navigation }) => {
   const [evidence, dispatch] = useReducer(reducer, evidenceInfo);
 
   return (
-    <>
-      <Text>Evidence Screen</Text>
-      {evidence.map(evidence => {
-        return <EvidenceCheckBox  key={evidence.id} evidence={evidence} dispatch={dispatch}/>;
-      })}
+    <View >
+      <Image
+        source={require('../../assets/JournalBG.jpg')}
+        style={styles.journalBG}
+      />
+      <div style={styles.evidenceGrid}>
+        {evidence.map(evidence => {
+          return <EvidenceCheckBox  key={evidence.id} evidence={evidence} dispatch={dispatch}/>;
+        })}
+      </div>
       <GhostList evidence={evidence} navigation={navigation}/>
-    </>
+    </View>
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  journalBG: {
+    ...StyleSheet.absoluteFillObject,
+    opacity: 0.8,
+  },
+  evidenceGrid: {
+    
+  }
+});
 
 
 export default EvidenceScreen;

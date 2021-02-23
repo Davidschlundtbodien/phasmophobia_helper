@@ -21,28 +21,27 @@ const EvidenceScreen = ({ navigation }) => {
   const [evidence, dispatch] = useReducer(reducer, evidenceInfo);
 
   return (
-    <View >
-      <Image
-        source={require('../../assets/JournalBG.jpg')}
-        style={styles.journalBG}
-      />
-      <div style={styles.evidenceGrid}>
+    <View style={styles.container}>
+
+      <View style={styles.evidenceList}>
         {evidence.map(evidence => {
-          return <EvidenceCheckBox  key={evidence.id} evidence={evidence} dispatch={dispatch}/>;
+          return <EvidenceCheckBox key={evidence.id} evidence={evidence} dispatch={dispatch} />;
         })}
-      </div>
+      </View>
+
+      
       <GhostList evidence={evidence} navigation={navigation}/>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  journalBG: {
-    ...StyleSheet.absoluteFillObject,
-    opacity: 0.8,
+  container: {
+    display: 'flex',
+    margin: 20
   },
-  evidenceGrid: {
-    
+  evidenceList: {
+    marginBottom: 20
   }
 });
 

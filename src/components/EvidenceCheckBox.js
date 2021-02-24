@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { CheckBox } from 'react-native-elements';
+import { globalStyles } from '../../styles/global';
 
 const EvidenceCheckBox = ({ evidence, dispatch }) => {
   return (
@@ -13,8 +14,6 @@ const EvidenceCheckBox = ({ evidence, dispatch }) => {
     </>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default EvidenceCheckBox;
 

@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, Image } from 'react-native';
 import EvidenceCheckBox from '../components/EvidenceCheckBox';
 import GhostList from '../components/GhostList';
 import { evidenceInfo } from '../components/EvidenceInfo'; 
+import { globalStyles } from '../../styles/global';
 
 
 const reducer = (evidence, action) => {
@@ -21,29 +22,16 @@ const EvidenceScreen = ({ navigation }) => {
   const [evidence, dispatch] = useReducer(reducer, evidenceInfo);
 
   return (
-    <View style={styles.container}>
+    <View style={globalStyles.container}>
 
-      <View style={styles.evidenceList}>
+      <View style={globalStyles.evidenceList}>
         {evidence.map(evidence => {
           return <EvidenceCheckBox key={evidence.id} evidence={evidence} dispatch={dispatch} />;
         })}
       </View>
-
-      
       <GhostList evidence={evidence} navigation={navigation}/>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    display: 'flex',
-    margin: 20
-  },
-  evidenceList: {
-    marginBottom: 20
-  }
-});
-
 
 export default EvidenceScreen;

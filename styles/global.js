@@ -10,25 +10,30 @@ export const globalStyles = StyleSheet.create({
   },
   ghostName: {
     fontSize: 45,
+    fontFamily: 'gentium-bold'
   },
   ghostEvidence: {
     fontSize: 25,
     textAlign: "center",
-    paddingVertical: 5
+    paddingVertical: 5,
+    fontFamily: 'gentium-regular'
   },
   ghostWeakness: {
     fontSize: 20,
     color: 'green',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'gentium-bold'
   },
   ghostStrength: {
     fontSize: 20,
     color: 'red',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'gentium-bold'
   },
   ghostDescription: {
     fontSize: 18,
-    textAlign: 'center'
+    textAlign: 'center',
+    fontFamily: 'gentium-italic'
   }, 
   container: {
     display: 'flex',
@@ -39,7 +44,8 @@ export const globalStyles = StyleSheet.create({
   },
   ghostLabel: {
     fontSize: 22,
-    padding: 10
+    padding: 10,
+    fontFamily: 'gentium-bold'
   },
   ghostList: {
     display: 'flex',

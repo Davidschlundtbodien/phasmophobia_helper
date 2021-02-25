@@ -36,11 +36,11 @@ export const globalStyles = StyleSheet.create({
     fontFamily: 'gentium-italic'
   }, 
   container: {
-    display: 'flex',
-    margin: 20
+    flex: 1,
+    justifyContent:"space-around"
   },
   evidenceList: {
-    marginBottom: 20
+    margin: 10
   },
   ghostLabel: {
     fontSize: 22,
@@ -48,11 +48,11 @@ export const globalStyles = StyleSheet.create({
     fontFamily: 'gentium-bold'
   },
   ghostList: {
-    display: 'flex',
+    flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: "space-evenly",
-    alignContent: "center",
+    alignContent: "flex-start",
   },
   buttonLabel: {
     borderWidth: 1,
@@ -61,5 +61,10 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: 'white',
     marginVertical: 8,
     marginHorizontal: 4
+  },
+  checkboxText: {
+    fontFamily: 'gentium-regular',
+    fontSize: 23,
+    
   }
 });

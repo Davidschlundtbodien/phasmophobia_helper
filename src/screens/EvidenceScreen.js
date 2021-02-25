@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, ImageBackground } from 'react-native';
 import EvidenceCheckBox from '../components/EvidenceCheckBox';
 import GhostList from '../components/GhostList';
 import { evidenceInfo } from '../components/EvidenceInfo'; 
@@ -22,7 +22,7 @@ const EvidenceScreen = ({ navigation }) => {
   const [evidence, dispatch] = useReducer(reducer, evidenceInfo);
 
   return (
-    <View style={globalStyles.container}>
+    <ImageBackground source={require('../../assets/JournalBG.jpg')} style={globalStyles.container}>
 
       <View style={globalStyles.evidenceList}>
         {evidence.map(evidence => {
@@ -30,7 +30,7 @@ const EvidenceScreen = ({ navigation }) => {
         })}
       </View>
       <GhostList evidence={evidence} navigation={navigation}/>
-    </View>
+    </ImageBackground>
   );
 };
 

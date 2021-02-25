@@ -13,7 +13,7 @@ const navigator = createStackNavigator(
   }, {
     initialRouteName: 'Evidence',
     defaultNavigationOptions: {
-      title: 'Ghost Evidence'
+      title: 'Phasmophobia Helper'
     }
   }
 );

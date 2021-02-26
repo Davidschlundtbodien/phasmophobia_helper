@@ -13,7 +13,9 @@ const navigator = createStackNavigator(
   }, {
     initialRouteName: 'Evidence',
     defaultNavigationOptions: {
-      title: 'Phasmophobia Helper'
+      title: 'Phasmophobia Helper',
+      headerStyle: { backgroundColor: '#c8c8c8'},
+      headerTintColor: '#5e5e5e'
     }
   }
 );

@@ -1,46 +1,62 @@
 import { StyleSheet } from 'react-native';
+import { color } from 'react-native-reanimated';
 
 export const globalStyles = StyleSheet.create({
   ghostDetail: {
-    flex: 1,
+    flex:1,
     justifyContent: "space-around",
     alignItems: 'center',
-    margin: 20
-
   },
   ghostName: {
-    fontSize: 45,
-    fontFamily: 'gentium-bold'
+    fontSize: 50,
+    margin: 15,
+    fontFamily: 'gentium-bold',
+    color: '#f8f8f8'
   },
+  ghostEvidenceList: {
+    justifyContent: "space-evenly",
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },  
   ghostEvidence: {
     fontSize: 25,
-    textAlign: "center",
-    paddingVertical: 5,
-    fontFamily: 'gentium-regular'
+    fontFamily: 'gentium-regular',
+    color: '#fdfdfd',
+    padding: 20
+  },
+  ghostDetailList: {
+    justifyContent: "space-between",
+    alignItems: 'center'
   },
   ghostWeakness: {
     fontSize: 20,
-    color: 'green',
-    textAlign: 'center',
-    fontFamily: 'gentium-bold'
+    color: '#50a834',
+    fontFamily: 'gentium-bold',
+    padding: 15,
+    textAlign: 'center'
   },
   ghostStrength: {
     fontSize: 20,
-    color: 'red',
-    textAlign: 'center',
-    fontFamily: 'gentium-bold'
+    color: '#e04545',
+    fontFamily: 'gentium-bold',
+    padding: 15,
+    textAlign: 'center'
   },
   ghostDescription: {
-    fontSize: 18,
-    textAlign: 'center',
-    fontFamily: 'gentium-italic'
+    fontSize: 20,
+    color: '#fdfdfd',
+    fontFamily: 'gentium-italic',
+    padding: 15,
+    textAlign: 'center'
   }, 
   container: {
     flex: 1,
-    justifyContent:"space-around"
+    justifyContent:"space-around",
+    backgroundColor: '#5e5e5e',
+    padding:10
   },
   evidenceList: {
-    margin: 10
+    margin: 4
   },
   ghostLabel: {
     fontSize: 22,
@@ -56,15 +72,21 @@ export const globalStyles = StyleSheet.create({
   },
   buttonLabel: {
     borderWidth: 1,
-    borderColor: 'white',
-    borderRadius: 20,
-    backgroundColor: 'white',
-    marginVertical: 8,
-    marginHorizontal: 4
+    borderColor: '#c9c9c9',
+    borderRadius: 25,
+    backgroundColor: '#c8c8c8',
+    padding: 3,
+    margin: 5
   },
   checkboxText: {
     fontFamily: 'gentium-regular',
-    fontSize: 23,
-    
+    fontSize: 23
+  },
+  evidenceCheckBoxBackground: {
+    backgroundColor: '#fdfdfd',
+    borderWidth: 1,
+    borderColor: '#c8c8c8',
+    borderRadius: 25,
+    padding: 15
   }
 });

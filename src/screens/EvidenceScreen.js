@@ -22,7 +22,7 @@ const EvidenceScreen = ({ navigation }) => {
   const [evidence, dispatch] = useReducer(reducer, evidenceInfo);
 
   return (
-    <ImageBackground source={require('../../assets/JournalBG.jpg')} style={globalStyles.container}>
+    <View style={globalStyles.container}>
 
       <View style={globalStyles.evidenceList}>
         {evidence.map(evidence => {
@@ -30,7 +30,7 @@ const EvidenceScreen = ({ navigation }) => {
         })}
       </View>
       <GhostList evidence={evidence} navigation={navigation}/>
-    </ImageBackground>
+    </View>
   );
 };
 

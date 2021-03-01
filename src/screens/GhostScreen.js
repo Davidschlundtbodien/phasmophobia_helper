@@ -14,8 +14,11 @@ const GhostScreen = ({ navigation }) => {
           }))}
         </View>
         <View style={globalStyles.ghostDetailList}>
+          <Text style={globalStyles.headerText}>Weakness</Text>
           <Text style={globalStyles.ghostWeakness}>{ghost.weakness}</Text>
+          <Text style={globalStyles.headerText}>Strength</Text>
           <Text style={globalStyles.ghostStrength}>{ghost.strength}</Text>
+          <Text style={globalStyles.headerText}>Journal Description</Text>
           <Text style={globalStyles.ghostDescription}>{ghost.description}</Text>
         </View>
       </View>

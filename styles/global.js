@@ -1,55 +1,63 @@
 import { StyleSheet } from 'react-native';
-import { color } from 'react-native-reanimated';
 
 export const globalStyles = StyleSheet.create({
   ghostDetail: {
     flex:1,
-    justifyContent: "space-around",
+    justifyContent: "space-evenly",
     alignItems: 'center',
   },
   ghostName: {
+    flex: 0,
     fontSize: 50,
-    margin: 15,
+    margin: 10,
     fontFamily: 'gentium-bold',
     color: '#fdfdfd'
   },
   ghostEvidenceList: {
-    justifyContent: "space-evenly",
-    flexDirection: 'row',
-    flexWrap: 'wrap'
+    flex: 0,
+    justifyContent: "space-around",
+    flexDirection: "row",
+    flexWrap: 'wrap',
+    padding: 15
   },  
   ghostEvidence: {
     fontSize: 25,
     fontFamily: 'gentium-regular',
     color: '#fdfdfd',
-    padding: 20
+    padding: 10
   },
   ghostDetailList: {
-    justifyContent: "space-between",
+    flex: 1,
+    justifyContent: "space-evenly",
     alignItems: 'center',
     backgroundColor: '#fdfdfd',
-    borderRadius: 20
-
+    borderRadius: 35,
+    padding: 10
   },
+  headerText: {
+    fontSize: 25,
+    fontFamily: 'gentium-bold',
+    color: '#575757'
+  },  
   ghostWeakness: {
     fontSize: 20,
     color: '#2D611F',
     fontFamily: 'gentium-bold',
-    padding: 15,
+    padding: 10,
     textAlign: 'center'
   },
   ghostStrength: {
     fontSize: 20,
     color: '#aa1d1d',
     fontFamily: 'gentium-bold',
-    padding: 15,
+    padding: 10,
     textAlign: 'center'
   },
   ghostDescription: {
     fontSize: 20,
     color: '#575757',
     fontFamily: 'gentium-italic',
-    padding: 15,
+    padding: 10,
     textAlign: 'center'
   }, 
   container: {

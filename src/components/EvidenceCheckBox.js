@@ -1,6 +1,5 @@
 import React from 'react';
 import { CheckBox } from 'react-native-elements';
-import { color } from 'react-native-reanimated';
 import { globalStyles } from '../../styles/global';
 
 const EvidenceCheckBox = ({ evidence, dispatch }) => {
@@ -11,6 +10,8 @@ const EvidenceCheckBox = ({ evidence, dispatch }) => {
         title={evidence.name}
         checked={evidence.isChecked}
         textStyle={globalStyles.checkboxText}
+        checkedColor={"#2d611f"}
+        uncheckedColor={"#2D611F"}
         onPress={() => dispatch({type: 'check_box', payload: {id: evidence.id }})}
       />
     </>

@@ -14,8 +14,11 @@ const navigator = createStackNavigator(
     initialRouteName: 'Evidence',
     defaultNavigationOptions: {
       title: 'Phasmophobia Helper',
-      headerStyle: { backgroundColor: '#c8c8c8'},
-      headerTintColor: '#5e5e5e'
+      headerStyle: { backgroundColor: '#424242'},
+      headerTintColor: '#fdfdfd',
+      headerTitleStyle: { fontFamily: 'gentium-bold', fontSize: 20},
+      headerBackTitleVisible: false,
+      headerBackAccessibilityLabel: 'Navigation back to Evidence Screen'
     }
   }
 );

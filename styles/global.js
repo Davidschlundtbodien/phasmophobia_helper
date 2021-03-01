@@ -11,7 +11,7 @@ export const globalStyles = StyleSheet.create({
     fontSize: 50,
     margin: 15,
     fontFamily: 'gentium-bold',
-    color: '#f8f8f8'
+    color: '#fdfdfd'
   },
   ghostEvidenceList: {
     justifyContent: "space-evenly",
@@ -26,25 +26,28 @@ export const globalStyles = StyleSheet.create({
   },
   ghostDetailList: {
     justifyContent: "space-between",
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#fdfdfd',
+    borderRadius: 20
+
   },
   ghostWeakness: {
     fontSize: 20,
-    color: '#50a834',
+    color: '#2D611F',
     fontFamily: 'gentium-bold',
     padding: 15,
     textAlign: 'center'
   },
   ghostStrength: {
     fontSize: 20,
-    color: '#e04545',
+    color: '#aa1d1d',
     fontFamily: 'gentium-bold',
     padding: 15,
     textAlign: 'center'
   },
   ghostDescription: {
     fontSize: 20,
-    color: '#fdfdfd',
+    color: '#575757',
     fontFamily: 'gentium-italic',
     padding: 15,
     textAlign: 'center'
@@ -52,7 +55,7 @@ export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent:"space-around",
-    backgroundColor: '#5e5e5e',
+    backgroundColor: '#575757',
     padding:10
   },
   evidenceList: {
@@ -72,20 +75,21 @@ export const globalStyles = StyleSheet.create({
   },
   buttonLabel: {
     borderWidth: 1,
-    borderColor: '#c9c9c9',
+    borderColor: '#575757',
     borderRadius: 25,
-    backgroundColor: '#c8c8c8',
+    backgroundColor: '#fdfdfd',
     padding: 3,
     margin: 5
   },
   checkboxText: {
     fontFamily: 'gentium-regular',
+    color: '#575757',
     fontSize: 23
   },
   evidenceCheckBoxBackground: {
     backgroundColor: '#fdfdfd',
     borderWidth: 1,
-    borderColor: '#c8c8c8',
+    borderColor: '#575757',
     borderRadius: 25,
     padding: 15
   }

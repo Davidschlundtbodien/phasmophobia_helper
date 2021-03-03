@@ -5,7 +5,7 @@ import { globalStyles } from '../../styles/global';
 const GhostScreen = ({ navigation }) => {
   const ghost = navigation.getParam('ghost');
   return (
-    <View style={globalStyles.container}>
+    <View style={globalStyles.container} onAccessibilityEscape={() => navigation.navigate('Evidence')}>
       <View style={globalStyles.ghostDetail}>
         <Text style={globalStyles.ghostName}>{ghost.name}</Text>
         <View style={globalStyles.ghostEvidenceList}>

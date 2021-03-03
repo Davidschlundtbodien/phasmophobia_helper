@@ -17,12 +17,24 @@ const GhostList = ({ evidence, navigation }) => {
   const ev = evidence.filter(ev => ev.isChecked).map(ev => ev.name);
   const ghosts = ghostInfo;
   return (
-    <View style={globalStyles.ghostList}>
+    <View 
+      style={globalStyles.ghostList}
+      accessibilityHint="Ghosts available"
+    >
       {ghosts.map(ghost => {
         if (GhostFilter(ev, ghost.evidence)) {
-          return <TouchableOpacity style={globalStyles.buttonLabel} key={ghost.name} onPress={() => navigation.navigate('Ghost', {ghost: ghost})}>
-            <Text style={globalStyles.ghostLabel}>{ghost.name}</Text>
-          </TouchableOpacity>;
+          return (
+            <TouchableOpacity 
+              accessibilityRole="menuitem" 
+              style={globalStyles.buttonLabel} 
+              key={ghost.name} 
+              onPress={() => navigation.navigate('Ghost', {ghost: ghost})}
+            >
+              <Text style={globalStyles.ghostLabel}>
+                {ghost.name}
+              </Text>
+            </TouchableOpacity>
+          );
         }
       })}
     </View>

@@ -25,8 +25,9 @@ const EvidenceScreen = ({ navigation }) => {
 
   return (
     <View style={globalStyles.container}>
-
-      <View style={globalStyles.evidenceList}>
+      <View 
+        style={globalStyles.evidenceList}
+      >
         {evidence.map(evidence => {
           return <EvidenceCheckBox key={evidence.id} evidence={evidence} dispatch={dispatch} />;
         })}

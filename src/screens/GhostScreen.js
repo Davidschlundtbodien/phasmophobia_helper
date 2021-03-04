@@ -7,14 +7,29 @@ const GhostScreen = ({ navigation }) => {
   return (
     <View style={globalStyles.container} onAccessibilityEscape={() => navigation.navigate('Evidence')}>
       <View style={globalStyles.ghostDetail}>
-        <Text style={globalStyles.ghostName}>{ghost.name}</Text>
+        <Text 
+          style={globalStyles.ghostName}
+        >
+          {ghost.name}
+        </Text>
         <View style={globalStyles.ghostEvidenceList}>
           {ghost.evidence.map((ev => {
-            return <Text style={globalStyles.ghostEvidence} key={ev} >{ev}</Text>;
+            return (
+              <Text 
+                style={globalStyles.ghostEvidence}
+                key={ev} 
+              >
+                {ev}
+              </Text>
+            );
           }))}
         </View>
         <View style={globalStyles.ghostDetailList}>
-          <Text style={globalStyles.headerText}>Weakness</Text>
+          <Text 
+            style={globalStyles.headerText}
+          >
+            Weakness
+          </Text>
           <Text style={globalStyles.ghostWeakness}>{ghost.weakness}</Text>
           <Text style={globalStyles.headerText}>Strength</Text>
           <Text style={globalStyles.ghostStrength}>{ghost.strength}</Text>

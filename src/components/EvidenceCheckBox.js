@@ -7,6 +7,7 @@ const EvidenceCheckBox = ({ evidence, dispatch }) => {
     <>
       <CheckBox 
         containerStyle={globalStyles.evidenceCheckBoxBackground}
+        accessibilityLabel={`Evidence option ${evidence.id} of 6, ${evidence.name}`}
         title={evidence.name}
         checked={evidence.isChecked}
         textStyle={globalStyles.checkboxText}
